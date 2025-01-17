@@ -1,0 +1,276 @@
+.fp-watermark{
+    display: none !important;
+}
+section {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow:hidden;
+}
+body {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg,#23d5ab ,lightblue, lightgray, #e66565);/**/
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.navbar {
+    position: relative;
+    z-index: 2;
+}
+
+.fp-tableCell{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow:hidden;
+}
+
+.slide-bottom{
+    animation:slide-bottom .7s cubic-bezier(.25,.46,.45,.94) infinite alternate both
+}
+
+
+
+
+/*<div class="mt-5 p-5 d-flex justify-content-between">*/
+
+@media (max-width:1300px) {
+    .section{
+        margin-left: 7vw;
+    }
+}
+
+@media (min-width: 1000px) {
+
+
+    #competences .fp-tableCell div{
+        width: 50vw;
+    }
+
+    #listes-competences{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #experience div h2, #competences div h2{
+        margin-bottom: 50px;
+    }
+
+    .sectionExperience p{
+        font-size: 1.3vw !important;
+        padding: 2vw;
+        
+    } 
+
+    p,li{
+        font-size: 1.3vw;
+    }
+
+    #apropos div h2{
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+
+
+@media (max-width: 1000px){
+
+
+    .fp-is-overflow .fp-overflow.fp-auto-height-responsive, .fp-is-overflow .fp-overflow.fp-auto-height, .fp-is-overflow > .fp-overflow {
+        overflow-y: visible;
+    }
+
+    .fp-overflow {
+
+        max-height: none !important;
+    }
+
+    .contenu{
+        border: 1.5px solid #3C3D37 !important;
+    }
+
+    p{
+        font-size: 5vw;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 5vw;
+    }
+
+    /* Section A propos */
+
+    #apropos div h2{
+        order: 1;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    #apropos div p{
+        padding: 2vw;
+        font-size: 3vw !important;
+        font-weight: bold;
+        width: 80vw;
+    }
+
+    #apropos div div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+
+    /* Section Experience */
+
+
+    #experience{
+        margin-top: 1000px !important;
+        margin-bottom: 1000px !important;
+    }
+
+    #experience div h2{
+        order: 1;
+        margin-top: 10vh;
+        margin-bottom:  10vh;
+    }
+
+
+    #experience div p{
+        padding: 2vw;
+        font-size: 3vw !important;
+        font-weight: bold;
+        width: 80vw;
+    }
+
+    #experience div div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+
+    #experience div .partie-haut{ 
+        margin-right: 15vw;
+    }
+
+    #experience div .partie-basse{
+        margin-right: 15vw;
+    }
+
+    
+    .sectionExperience{
+        display: flex;
+        flex-direction: row;
+    } 
+   
+    /* Section Compétences */
+
+    #competences div div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+
+     #competences li{
+        font-size: 4vw !important;
+     }
+
+    #competences ul{
+        width: 50vw;
+        height: 40vh;
+        overflow:hidden;
+    }
+
+    
+    
+
+    /* Section Contact */
+
+    #contact div h2{
+        order: 1;
+        margin-top: 15vh;
+        margin-bottom: 15vh !important;
+    }
+
+    #contact div p{
+        
+       font-size: 4vw;
+    }
+
+    
+     
+}
+
+.animation-ping{
+    animation: myAnim 3s ease 3s infinite normal forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+    
+}
+
+#roue{
+    animation: entranceRoue 1s ease 0s  normal forwards;
+}
+
+@keyframes entranceRoue {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px) rotate(-200deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes slide-bottom{
+    0%{
+        transform:translateY(0)
+    }
+    100%{
+        transform:translateY(100px)
+    }}
