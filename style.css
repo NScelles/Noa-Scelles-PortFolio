@@ -42,6 +42,11 @@ body {
     animation:slide-bottom .7s cubic-bezier(.25,.46,.45,.94) infinite alternate both
 }
 
+a{
+    color:#212529;
+    font-weight:649;  
+    text-decoration: none;
+}
 
 
 
